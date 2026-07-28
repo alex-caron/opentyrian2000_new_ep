@@ -1,16 +1,51 @@
-OpenTyrian2000
+OpenTyrian2000 — Episode 6: First Contact
 ================================================================================
 
-OpenTyrian2000 is an open-source port of the DOS game Tyrian. It is a fork of
-OpenTyrian, with the end goal being to replicate the experience of Tyrian 2000
-as closely as possible.
+This repository is a fork of OpenTyrian2000 centered on Episode 6: First
+Contact, a complete new Tyrian campaign with eight original missions. It
+continues beyond the original episodes with a new story, new mission routes,
+progressive equipment shops, varied combat encounters, and environments
+assembled from the artwork and visual styles of all five original episodes.
 
-Tyrian is an arcade-style vertical scrolling shooter.  The story is set
-in 20,031 where you play as Trent Hawkins, a skilled fighter-pilot employed
-to fight MicroSol and save the galaxy.
+The goal is to make Episode 6 feel like a natural extension of Tyrian 2000:
+familiar in its art, music, enemies, and weapons, but distinct in its campaign
+structure, locations, and atmosphere.
 
-Tyrian features a story mode, one- and two-player arcade modes, and networked
-multiplayer.
+OpenTyrian2000 is itself an open-source port of the DOS game Tyrian and a fork
+of OpenTyrian. Tyrian is an arcade-style vertical scrolling shooter set in the
+year 20,031, starring fighter pilot Trent Hawkins.
+
+== The New Episode ==============================================================
+
+Episode 6 begins when an unknown transmission reaches Trent from beyond the
+charted galaxy. Following the signal reveals a chain of abandoned systems,
+living machines, corrupted worlds, and a hidden intelligence waiting at the
+source.
+
+The journey moves through frozen vaults, volcanic ruins, an infected jungle
+moon, an artificial black sun, a fractured machine paradise, and the buried
+cathedral of the First Voice. Each mission has its own scenery and encounter
+style instead of repeating a single visual theme.
+
+The eight missions are:
+
+1. FIRST CNT  -- the first encounter with the unknown transmission
+2. COLD ECHO  -- a remixed ice vault and the Cryo Warden
+3. FROSTGATE  -- crystal gates, buried installations, and a derelict fleet
+4. CINDERWAY  -- volcanic canyons, fossils, and living machinery
+5. NIGHTROOT  -- an infected jungle moon and the Rootmind
+6. BLACK SUN  -- orbital wreckage, an asteroid foundry, and the Null Core
+7. PALE EDEN  -- a fractured machine paradise guarded by SERAPH-0
+8. LAST WORD  -- the broadcast cathedral and the First Voice
+
+Episode 6 includes an original connected story, mission briefings, progressive
+equipment shops, equipment from the original episodes, and a full ending. It
+remains faithful to the look and feel of Tyrian 2000 while taking the campaign
+into places the original game never visited.
+
+Start the new episode directly with:
+
+  ./opentyrian2000 --data=data --episode=6
 
 == Additional Necessary Files ==================================================
 
