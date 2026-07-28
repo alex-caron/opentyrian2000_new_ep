@@ -26,8 +26,9 @@
 /* Episodes and general data */
 
 #define FIRST_LEVEL 1
-#define EPISODE_MAX 5
-#define EPISODE_AVAILABLE 5
+#define EPISODE_BUILTIN_MAX 5
+#define EPISODE_MAX 6
+#define EPISODE_AVAILABLE 6
 
 typedef struct
 {
@@ -167,5 +168,6 @@ void JE_loadItemDat(void);
 void JE_initEpisode(JE_byte newEpisode);
 unsigned int JE_findNextEpisode(void);
 void JE_scanForEpisodes(void);
+ulong JE_episodeStartCash(JE_byte episode);
 
 #endif /* EPISODES_H */

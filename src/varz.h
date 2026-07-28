@@ -84,6 +84,7 @@ struct JE_SingleEnemyType
 	JE_byte     filter;
 	JE_integer  evalue;
 	JE_integer  fixedmovey;
+	JE_boolean  fixed_screen;
 	JE_byte     freq[3]; /* [1..3] */
 	JE_byte     launchwait;
 	JE_word     launchtype;

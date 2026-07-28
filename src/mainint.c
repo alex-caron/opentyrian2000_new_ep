@@ -983,7 +983,10 @@ void JE_nextEpisode(void)
 
 	unsigned int newEpisode = JE_findNextEpisode();
 
-	if (jumpBackToEpisode1)
+	/* Built-in final episodes use the original credits and unlock sequence.
+	 * Custom episodes already present their authored ending in levelsN.dat and
+	 * should wrap directly to Episode 1. */
+	if (jumpBackToEpisode1 && episodeNum <= EPISODE_BUILTIN_MAX)
 	{
 		if (episodeNum > 2 &&
 			!constantPlay)

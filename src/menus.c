@@ -34,7 +34,7 @@
 #include "vga256d.h"
 #include "video.h"
 
-char episode_name[6][31];
+char episode_name[EPISODE_MAX + 1][31];
 char difficulty_name[7][21];
 char gameplay_name[GAMEPLAY_NAME_COUNT][26];
 char timed_battle_name[4][23];
@@ -258,7 +258,7 @@ bool episodeSelect(void)
 	const int yMenuHeader = 20;
 	const int xMenuItem = 20;
 	const int yMenuItems = 50;
-	const int dyMenuItems = 30;
+	const int dyMenuItems = 24;
 	const int hMenuItem = 13;
 	int wMenuItem[EPISODE_AVAILABLE] = { 0 };
 

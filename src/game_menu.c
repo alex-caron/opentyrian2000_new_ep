@@ -189,25 +189,28 @@ void JE_itemScreen(void)
 
 	curMenu = MENU_FULL_GAME;
 
-	int temp_weapon_power[7]; // assumes there'll never be more than 6 weapons to choose from, 7th is "Done"
+	/* One power value per inventory slot, plus the final "Done" choice. */
+	int temp_weapon_power[COUNTOF(itemAvail[0]) + 1];
 
 	/* JE: (* Check for where Pitems and Select match up - if no match then add to the itemavail list *) */
 	for (int i = 0; i < 7; i++)
 	{
 		int item = *playeritem_map(&player[0].last_items, i);
+		const uint inventory = itemAvailMap[i] - 1;
 
 		int slot = 0;
 
-		for (; slot < itemAvailMax[itemAvailMap[i]-1]; ++slot)
+		for (; slot < itemAvailMax[inventory]; ++slot)
 		{
-			if (itemAvail[itemAvailMap[i]-1][slot] == item)
+			if (itemAvail[inventory][slot] == item)
 				break;
 		}
 
-		if (slot == itemAvailMax[itemAvailMap[i]-1])
+		if (slot == itemAvailMax[inventory] &&
+		    slot < (int)COUNTOF(itemAvail[inventory]))
 		{
-			itemAvail[itemAvailMap[i]-1][slot] = item;
-			itemAvailMax[itemAvailMap[i]-1]++;
+			itemAvail[inventory][slot] = item;
+			itemAvailMax[inventory]++;
 		}
 	}
 
@@ -553,29 +556,37 @@ void JE_itemScreen(void)
 
 				int afford_shade = (temp_cost > player[0].cash) ? 4 : 0;  // can player afford current weapon at all
 
-				temp = itemAvail[itemAvailMap[curSel[MENU_UPGRADES]-2]-1][tempW-1]; /* Item ID */
-				switch (curSel[MENU_UPGRADES]-1)
+				if (tempW < menuChoices[curMenu]-1)
 				{
-					case 1: /* ship */
-						if (temp > 90)
-							snprintf(tempStr, sizeof(tempStr), "Custom Ship %d", temp - 90);
-						else
-							strcpy(tempStr, ships[temp].name);
-						break;
-					case 2: /* front and rear weapon */
-					case 3:
-						strcpy(tempStr, weaponPort[temp].name);
-						break;
-					case 4: /* shields */
-						strcpy(tempStr, shields[temp].name);
-						break;
-					case 5: /* generator */
-						strcpy(tempStr, powerSys[temp].name);
-						break;
-					case 6: /* sidekicks */
-					case 7:
-						strcpy(tempStr, options[temp].name);
-						break;
+					temp = itemAvail[itemAvailMap[curSel[MENU_UPGRADES]-2]-1][tempW-1]; /* Item ID */
+					switch (curSel[MENU_UPGRADES]-1)
+					{
+						case 1: /* ship */
+							if (temp > 90)
+								snprintf(tempStr, sizeof(tempStr), "Custom Ship %d", temp - 90);
+							else
+								strcpy(tempStr, ships[temp].name);
+							break;
+						case 2: /* front and rear weapon */
+						case 3:
+							strcpy(tempStr, weaponPort[temp].name);
+							break;
+						case 4: /* shields */
+							strcpy(tempStr, shields[temp].name);
+							break;
+						case 5: /* generator */
+							strcpy(tempStr, powerSys[temp].name);
+							break;
+						case 6: /* sidekicks */
+						case 7:
+							strcpy(tempStr, options[temp].name);
+							break;
+					}
+				}
+				else
+				{
+					temp = 0;
+					strcpy(tempStr, miscText[13]);
 				}
 				if (tempW == curSel[curMenu]-1)
 					temp2 = 15;
@@ -591,11 +602,6 @@ void JE_itemScreen(void)
 					blit_sprite2(VGAScreen, 298, tempY+2, shopSpriteSheet, 247);
 				}
 
-				/* Draw DONE */
-				if (tempW == menuChoices[curMenu]-1)
-				{
-					strcpy(tempStr, miscText[13]);
-				}
 				JE_textShade(VGAScreen, 185, tempY, tempStr, temp2 / 16, temp2 % 16 - 8 - afford_shade, DARKEN);
 
 				/* Draw icon if not DONE. NOTE: None is a normal item with a blank icon. */

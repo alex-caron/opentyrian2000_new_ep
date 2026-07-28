@@ -290,9 +290,10 @@ void JE_loadHelpText(void)
 
 	// episode names
 	skip_pascal_string(f);
-	for (unsigned int i = 0; i < COUNTOF(episode_name); ++i)
+	for (unsigned int i = 0; i <= EPISODE_BUILTIN_MAX; ++i)
 		read_encrypted_pascal_string(episode_name[i], sizeof(episode_name[i]), f);
 	skip_pascal_string(f);
+	strcpy(episode_name[EPISODE_BUILTIN_MAX + 1], "Episode 6: First Contact");
 
 	// difficulty names
 	skip_pascal_string(f);

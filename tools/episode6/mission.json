@@ -1,0 +1,2119 @@
+{
+  "episode_title": "Episode 6: First Contact",
+  "base_episode": 5,
+  "base_level": 1,
+  "prologue_title": "A SIGNAL FROM THE DARK",
+  "prologue": [
+    "Beyond the charted trade lanes, a signal wakes",
+    "inside a dead asteroid.",
+    "Automated warships answer it, but no known faction",
+    "claims the transmission.",
+    "Reach the source before it calls something worse."
+  ],
+  "ending_title": "THE FIRST VOICE FALLS",
+  "ending": [
+    "The First Voice fractures. Its command foundry falls silent.",
+    "Across the dead timelines, stars return one by one.",
+    "The first transmission repeats without its command:",
+    "FIRST CONTACT.",
+    "This time, only your own beacon answers home."
+  ],
+  "ending_hint": "The Last Word is spoken. The sky belongs to the living again.",
+  "shops": [
+    {
+      "name": "Signal Outfitting",
+      "inventory": {
+        "ship": [1, 9],
+        "front_weapon": [2, 45, 41, 7],
+        "rear_weapon": [0, 11, 10, 29],
+        "power": [1, 5, 2],
+        "engine": [2, 1],
+        "left_option": [0, 9, 16, 30],
+        "right_option": [0, 9, 20, 30],
+        "armor": [1, 2, 3],
+        "shield": [1, 2, 3]
+      }
+    },
+    {
+      "name": "Contact Salvage",
+      "inventory": {
+        "ship": [1, 9, 3, 14, 2],
+        "front_weapon": [2, 45, 41, 7, 43],
+        "rear_weapon": [0, 11, 30, 12, 15],
+        "power": [1, 2, 3, 4, 5],
+        "engine": [1, 2, 4],
+        "left_option": [0, 9, 16, 30, 31],
+        "right_option": [0, 16, 20, 30, 31],
+        "armor": [1, 2, 3],
+        "shield": [1, 2, 3, 4]
+      }
+    },
+    {
+      "name": "Cryo Vault Arsenal",
+      "inventory": {
+        "ship": [3, 4, 5, 14, 16],
+        "front_weapon": [7, 8, 13, 17, 43],
+        "rear_weapon": [0, 9, 18, 28, 29],
+        "power": [2, 3, 4, 5, 6],
+        "engine": [1, 2, 3, 4],
+        "left_option": [0, 13, 14, 16, 31],
+        "right_option": [0, 13, 14, 20, 31],
+        "armor": [1, 2, 3, 4],
+        "shield": [2, 3, 4, 5]
+      }
+    },
+    {
+      "name": "Gatebreaker Reserve",
+      "inventory": {
+        "ship": [4, 6, 7, 9, 16],
+        "front_weapon": [1, 13, 27, 42, 45],
+        "rear_weapon": [0, 12, 18, 22, 30],
+        "power": [2, 3, 4, 5, 6],
+        "engine": [2, 3, 4, 5],
+        "left_option": [0, 2, 6, 11, 29],
+        "right_option": [0, 3, 6, 22, 29],
+        "armor": [1, 2, 3, 4],
+        "shield": [4, 5, 6, 8, 11]
+      }
+    },
+    {
+      "name": "Receiver Spoils",
+      "inventory": {
+        "ship": [5, 7, 13, 14, 16],
+        "front_weapon": [3, 5, 19, 20, 40],
+        "rear_weapon": [0, 14, 21, 28, 29],
+        "power": [3, 4, 5, 6],
+        "engine": [3, 4, 5, 6],
+        "left_option": [0, 7, 17, 21, 27],
+        "right_option": [0, 8, 18, 23, 28],
+        "armor": [2, 3, 4],
+        "shield": [6, 7, 8, 9, 10]
+      }
+    },
+    {
+      "name": "Rootmind Cache",
+      "inventory": {
+        "ship": [7, 10, 11, 12, 15],
+        "front_weapon": [8, 27, 39, 45, 47],
+        "rear_weapon": [0, 22, 39, 44, 46],
+        "power": [4, 5, 6],
+        "engine": [4, 5, 6],
+        "left_option": [0, 14, 25, 31, 32],
+        "right_option": [0, 22, 26, 30, 32],
+        "armor": [3, 4],
+        "shield": [7, 8, 9, 10, 11]
+      }
+    },
+    {
+      "name": "Black Sun Relics",
+      "inventory": {
+        "ship": [10, 12, 15, 17, 18],
+        "front_weapon": [35, 39, 44, 45, 47],
+        "rear_weapon": [24, 29, 30, 44, 46],
+        "power": [4, 5, 6],
+        "engine": [4, 5, 6],
+        "left_option": [22, 25, 29, 31, 32],
+        "right_option": [23, 26, 28, 30, 32],
+        "armor": [3, 4],
+        "shield": [8, 9, 10, 11]
+      }
+    },
+    {
+      "name": "Final Protocol",
+      "inventory": {
+        "ship": [11, 13, 16, 17, 18],
+        "front_weapon": [34, 40, 42, 46, 47],
+        "rear_weapon": [26, 31, 40, 45, 46],
+        "power": [4, 5, 6],
+        "engine": [4, 5, 6],
+        "left_option": [21, 27, 29, 31, 32],
+        "right_option": [22, 28, 30, 31, 32],
+        "armor": [3, 4],
+        "shield": [8, 9, 10, 11]
+      }
+    }
+  ],
+  "missions": [
+    {
+      "mission_title": "FIRST CNT",
+      "description": "The opening encounter at the source of the unknown transmission.",
+      "briefing_title": "FIRST CONTACT",
+      "briefing": [
+        "The beacon is close. Its defense grid is already",
+        "tracking your ship.",
+        "Break through and identify whatever is transmitting."
+      ],
+      "song": 35,
+      "map_style": "source",
+      "preamble_source_events": [0, 1, 2, 3, 4, 5, 6, 7],
+      "source_segments": [
+        {
+          "name": "opening drone wall",
+          "first_event": 8,
+          "last_event": 29,
+          "time_offset": -50
+        },
+        {
+          "name": "crossing attack formations",
+          "first_event": 50,
+          "last_event": 109,
+          "time_offset": -90
+        },
+        {
+          "name": "ground battery approach",
+          "first_event": 170,
+          "last_event": 181,
+          "time_offset": -170
+        },
+        {
+          "name": "guardian formation",
+          "first_event": 182,
+          "last_event": 195,
+          "time_offset": -157
+        }
+      ],
+      "events": [
+        {
+          "time": 599,
+          "type": 79,
+          "data1": 81,
+          "data2": 82,
+          "comment": "Show health bars for the linked guardian enemies."
+        },
+        {
+          "time": 640,
+          "type": 36,
+          "comment": "Finish once the guardian formation has been destroyed."
+        },
+        {
+          "time": 900,
+          "type": 11,
+          "comment": "Safety timeout."
+        }
+      ]
+    },
+    {
+      "mission_title": "COLD ECHO",
+      "description": "A new frozen mission built from Episode 4's ice environment and enemies.",
+      "briefing_title": "THE ESCAPING PULSE",
+      "briefing": [
+        "The guardians are down, but one pulse escaped",
+        "into an Ixmucane ice vault.",
+        "Break the defense ring and silence the Cryo Warden."
+      ],
+      "song": 4,
+      "source_episode": 4,
+      "source_level": 8,
+      "map_source_episode": 4,
+      "map_source_level": 8,
+      "map_style": "cold_echo_remix",
+      "preamble_source_events": [0, 1],
+      "source_segments": [
+        {
+          "name": "crossing ice wall",
+          "first_event": 450,
+          "last_event": 520,
+          "time_offset": -1550
+        },
+        {
+          "name": "frozen scout lattice",
+          "first_event": 276,
+          "last_event": 369,
+          "time_offset": 0
+        },
+        {
+          "name": "vault defense ring",
+          "first_event": 524,
+          "last_event": 618,
+          "time_offset": -1000
+        },
+        {
+          "name": "cryo warden",
+          "first_event": 620,
+          "last_event": 651,
+          "time_offset": -1000
+        }
+      ],
+      "events": [
+        {"time": 3600, "type": 11, "comment": "Safety timeout after the Cryo Warden encounter."}
+      ]
+    },
+    {
+      "mission_title": "FROSTGATE",
+      "description": "A multi-source ice installation and derelict fleet background authored from JSON.",
+      "briefing_title": "THE VAULT WAS ONLY A LOCK",
+      "briefing": [
+        "Behind the Warden, an ancient carrier graveyard is waking.",
+        "The signal is rebuilding a gate from the frozen hulls.",
+        "Cross the lattice and destroy the Gate Engine."
+      ],
+      "song": 37,
+      "source_episode": 3,
+      "source_level": 6,
+      "map_source_episode": 4,
+      "map_source_level": 8,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 4,
+          "source_level": 8,
+          "tile": 1
+        },
+        "scatter": [
+          {
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 8,
+            "tiles": [13, 25],
+            "count": 360,
+            "seed": 6106
+          }
+        ],
+        "bands": [
+          {
+            "name": "lower buried installation",
+            "layer": 1,
+            "source_episode": 3,
+            "source_level": 1,
+            "source_first_row": 50,
+            "source_end_row": 90,
+            "destination_row": 225
+          },
+          {
+            "name": "central machine trench",
+            "layer": 1,
+            "source_episode": 3,
+            "source_level": 1,
+            "source_first_row": 100,
+            "source_end_row": 140,
+            "destination_row": 135
+          },
+          {
+            "name": "upper gate foundation",
+            "layer": 1,
+            "source_episode": 3,
+            "source_level": 1,
+            "source_first_row": 150,
+            "source_end_row": 190,
+            "destination_row": 175
+          }
+        ],
+        "placements": [
+          {"name": "southern ice wall", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 234, 14, 6], "destination": [0, 550]},
+          {"name": "lower left bastion", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 297, 10, 7], "destination": [0, 510]},
+          {"name": "lower right bastion", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [8, 248, 6, 9], "destination": [8, 495]},
+          {"name": "first gate crown", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 325, 14, 10], "destination": [0, 440]},
+          {"name": "central bridge", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 376, 14, 3], "destination": [0, 400]},
+          {"name": "right crystal shelf", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [2, 534, 12, 7], "destination": [2, 350]},
+          {"name": "central crystal island", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [2, 384, 8, 7], "destination": [3, 305]},
+          {"name": "upper left wall", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 412, 8, 6], "destination": [0, 260]},
+          {"name": "upper right slope", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [1, 493, 8, 5], "destination": [6, 260]},
+          {"name": "second gate crown", "layer": 2, "source_episode": 4, "source_level": 8, "source_rect": [0, 234, 14, 6], "destination": [0, 210]},
+          {"name": "gate crystal", "layer": 2, "source_episode": 3, "source_level": 1, "source_rect": [2, 593, 7, 4], "destination": [4, 170]},
+          {"name": "left beacon", "layer": 2, "source_episode": 3, "source_level": 1, "source_rect": [2, 507, 5, 4], "destination": [1, 130]},
+          {"name": "right beacon", "layer": 2, "source_episode": 3, "source_level": 1, "source_rect": [2, 287, 5, 4], "destination": [8, 130]},
+          {"name": "gate core", "layer": 2, "source_episode": 3, "source_level": 1, "source_rect": [3, 580, 5, 3], "destination": [5, 120]},
+          {"name": "carrier one", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [1, 538, 8, 14], "destination": [1, 578]},
+          {"name": "carrier two", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [6, 365, 8, 8], "destination": [6, 530]},
+          {"name": "carrier three", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [3, 494, 8, 8], "destination": [3, 465]},
+          {"name": "carrier four", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [2, 578, 8, 8], "destination": [2, 395]},
+          {"name": "carrier five", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [2, 407, 8, 8], "destination": [6, 325]},
+          {"name": "carrier six", "layer": 3, "source_episode": 3, "source_level": 6, "source_rect": [2, 320, 8, 8], "destination": [1, 245]}
+        ]
+      },
+      "preamble_source_events": [0, 1, 2, 3],
+      "boss_gate": {
+        "freeze_time": 4500,
+        "jump_target": 5000
+      },
+      "source_segments": [
+        {"name": "fleet vanguard", "first_event": 4, "last_event": 220, "time_offset": 0},
+        {"name": "carrier defense screen", "first_event": 330, "last_event": 552, "time_offset": -150},
+        {"name": "gate lattice", "first_event": 1097, "last_event": 1455, "time_offset": -1900},
+        {"name": "gate engine arrival", "first_event": 1456, "last_event": 1467, "time_offset": -1800},
+        {"name": "gate engine core", "first_event": 1469, "last_event": 1476, "time_offset": -1800},
+        {"name": "gate engine battle", "first_event": 1478, "last_event": 1648, "time_offset": -1800}
+      ],
+      "events": [
+        {"time": 0, "type": 2, "data1": 1, "data2": 3, "data3": 3, "comment": "Scroll the ice structures and fleet wrecks as authored parallax layers."},
+        {"time": 2301, "type": 2, "data1": 1, "data2": 3, "data3": 3, "comment": "Restore Frostgate parallax after the remixed fleet event."},
+        {"time": 3200, "type": 57, "data1": 5000, "comment": "Destroying the link-254 Gate Engine jumps to the otherwise unreachable mission exit."},
+        {"time": 4500, "type": 2, "comment": "Freeze the encounter clock and background until the Gate Engine is destroyed."},
+        {"time": 5000, "type": 11, "data1": 1, "comment": "The Gate Engine's link-254 destruction jump lands here and completes the mission."}
+      ]
+    },
+    {
+      "mission_title": "CINDERWAY",
+      "description": "A volcanic descent through ash, lava, bone caverns, and a living receiver complex.",
+      "briefing_title": "THROUGH THE BROKEN GATE",
+      "briefing": [
+        "The Frostgate dies, but its last pulse tears space open.",
+        "Your ship is thrown through before the breach collapses.",
+        "Below: a volcanic world wrapped around a living machine.",
+        "Find the receiver and burn it out."
+      ],
+      "song": 17,
+      "source_episode": 4,
+      "source_level": 12,
+      "map_source_episode": 4,
+      "map_source_level": 12,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 4,
+          "source_level": 6,
+          "tile": 0
+        },
+        "scatter": [
+          {
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 6,
+            "tiles": [1, 2],
+            "count": 420,
+            "seed": 6204
+          }
+        ],
+        "bands": [
+          {"name": "ashfall surface", "layer": 1, "source_episode": 4, "source_level": 4, "source_first_row": 0, "source_end_row": 30, "destination_row": 270},
+          {"name": "molten canyon", "layer": 1, "source_episode": 4, "source_level": 6, "source_first_row": 200, "source_end_row": 225, "destination_row": 245},
+          {"name": "lava delta", "layer": 1, "source_episode": 4, "source_level": 9, "source_first_row": 150, "source_end_row": 175, "destination_row": 220},
+          {"name": "fossil core", "layer": 1, "source_episode": 4, "source_level": 5, "source_first_row": 100, "source_end_row": 120, "destination_row": 200},
+          {"name": "living machine", "layer": 1, "source_episode": 4, "source_level": 7, "source_first_row": 50, "source_end_row": 70, "destination_row": 180},
+          {"name": "receiver chamber", "layer": 1, "source_episode": 4, "source_level": 15, "source_first_row": 0, "source_end_row": 80, "destination_row": 100}
+        ],
+        "placements": [
+          {"name": "entry canyon", "layer": 2, "source_episode": 4, "source_level": 6, "source_rect": [0, 521, 14, 56], "destination": [0, 540]},
+          {"name": "broken caldera", "layer": 2, "source_episode": 4, "source_level": 6, "source_rect": [0, 472, 14, 31], "destination": [0, 495]},
+          {"name": "basalt jaws", "layer": 2, "source_episode": 4, "source_level": 6, "source_rect": [0, 413, 14, 22], "destination": [0, 450]},
+          {"name": "lower magma channel", "layer": 2, "source_episode": 4, "source_level": 6, "source_rect": [0, 337, 14, 25], "destination": [0, 415]},
+          {"name": "upper magma channel", "layer": 2, "source_episode": 4, "source_level": 6, "source_rect": [0, 200, 14, 25], "destination": [0, 380]},
+          {"name": "western lava island", "layer": 2, "source_episode": 4, "source_level": 9, "source_rect": [0, 391, 11, 11], "destination": [0, 350]},
+          {"name": "eastern lava island", "layer": 2, "source_episode": 4, "source_level": 9, "source_rect": [6, 338, 7, 7], "destination": [7, 330]},
+          {"name": "central lava island", "layer": 2, "source_episode": 4, "source_level": 9, "source_rect": [4, 174, 7, 9], "destination": [3, 305]},
+          {"name": "receiver outer wall", "layer": 2, "source_episode": 4, "source_level": 15, "source_rect": [0, 395, 14, 43], "destination": [0, 270]},
+          {"name": "receiver throat", "layer": 2, "source_episode": 4, "source_level": 15, "source_rect": [1, 99, 13, 26], "destination": [1, 240]},
+          {"name": "receiver crown", "layer": 2, "source_episode": 4, "source_level": 15, "source_rect": [0, 37, 13, 14], "destination": [0, 220]},
+          {"name": "entry gantry", "layer": 3, "source_episode": 4, "source_level": 15, "source_rect": [2, 583, 11, 5], "destination": [2, 570]},
+          {"name": "hanging machine one", "layer": 3, "source_episode": 4, "source_level": 15, "source_rect": [2, 428, 11, 14], "destination": [2, 500]},
+          {"name": "hanging machine two", "layer": 3, "source_episode": 4, "source_level": 15, "source_rect": [2, 402, 11, 15], "destination": [2, 415]},
+          {"name": "receiver conduit", "layer": 3, "source_episode": 4, "source_level": 15, "source_rect": [6, 509, 7, 9], "destination": [6, 325]},
+          {"name": "heart aperture", "layer": 3, "source_episode": 4, "source_level": 15, "source_rect": [2, 343, 7, 7], "destination": [3, 350]}
+        ]
+      },
+      "preamble_source_events": [0, 1, 2, 3, 4, 5],
+      "source_segments": [
+        {"name": "ashfall entry", "first_event": 6, "last_event": 300, "time_offset": 0},
+        {"name": "magma descent", "first_event": 400, "last_event": 900, "time_offset": 0},
+        {"name": "receiver awakening", "first_event": 901, "last_event": 981, "time_offset": 0},
+        {"name": "receiver heart", "first_event": 983, "last_event": 1238, "time_offset": 0}
+      ],
+      "events": [
+        {"time": 0, "type": 2, "data1": 2, "data2": 4, "data3": 3, "comment": "Drive the rapid surface-to-core descent."},
+        {"time": 3000, "type": 57, "data1": 5200, "comment": "Jump to the destruction sequence when the Receiver Heart dies."},
+        {"time": 3001, "type": 36, "comment": "Arm mission completion for the Receiver Heart encounter."},
+        {"time": 5200, "type": 11, "data1": 1, "comment": "Receiver Heart destruction exit."},
+        {"time": 5500, "type": 11, "data1": 1, "comment": "Safety timeout after the Receiver Heart encounter."}
+      ]
+    },
+    {
+      "mission_title": "NIGHTROOT",
+      "description": "A night jungle infected by the signal, descending through machine roots into the Rootmind nest.",
+      "briefing_title": "THE RECEIVER PLANTED A SEED",
+      "briefing": [
+        "The dying receiver fired one last seed toward a jungle moon.",
+        "Now every creature answers a mind beneath the canopy.",
+        "Follow the infected river into the roots and kill it."
+      ],
+      "song": 13,
+      "source_episode": 4,
+      "source_level": 13,
+      "map_source_episode": 4,
+      "map_source_level": 13,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 2,
+          "source_level": 2,
+          "tile": 0
+        },
+        "bands": [
+          {"name": "buried root bed", "layer": 1, "source_episode": 2, "source_level": 2, "source_first_row": 180, "source_end_row": 300, "destination_row": 40},
+          {"name": "machine-root delta", "layer": 1, "source_episode": 2, "source_level": 11, "source_first_row": 190, "source_end_row": 240, "destination_row": 160},
+          {"name": "infected botany works", "layer": 1, "source_episode": 2, "source_level": 10, "source_first_row": 160, "source_end_row": 210, "destination_row": 210},
+          {"name": "night river canopy", "layer": 1, "source_episode": 2, "source_level": 1, "source_first_row": 80, "source_end_row": 120, "destination_row": 260},
+          {"name": "spore shadow field", "layer": 2, "source_episode": 4, "source_level": 13, "source_first_row": 0, "source_end_row": 600, "destination_row": 0},
+          {"name": "first hanging maw", "layer": 2, "source_episode": 2, "source_level": 2, "source_first_row": 500, "source_end_row": 525, "destination_row": 520},
+          {"name": "botany infection gate", "layer": 2, "source_episode": 2, "source_level": 2, "source_first_row": 400, "source_end_row": 425, "destination_row": 445},
+          {"name": "lower root gate", "layer": 2, "source_episode": 2, "source_level": 2, "source_first_row": 300, "source_end_row": 325, "destination_row": 370},
+          {"name": "deep rib gate", "layer": 2, "source_episode": 2, "source_level": 2, "source_first_row": 175, "source_end_row": 200, "destination_row": 280},
+          {"name": "rootmind aperture", "layer": 2, "source_episode": 2, "source_level": 2, "source_first_row": 100, "source_end_row": 150, "destination_row": 220},
+          {"name": "deep foreground", "layer": 3, "source_episode": 2, "source_level": 2, "source_first_row": 0, "source_end_row": 100, "destination_row": 0},
+          {"name": "upper rib foreground", "layer": 3, "source_episode": 2, "source_level": 2, "source_first_row": 100, "source_end_row": 300, "destination_row": 100},
+          {"name": "middle rib foreground", "layer": 3, "source_episode": 2, "source_level": 2, "source_first_row": 300, "source_end_row": 450, "destination_row": 300},
+          {"name": "lower rib foreground", "layer": 3, "source_episode": 2, "source_level": 2, "source_first_row": 450, "source_end_row": 500, "destination_row": 450}
+        ]
+      },
+      "preamble_source_events": [0, 1],
+      "boss_gate": {
+        "freeze_time": 6000,
+        "jump_target": 6200
+      },
+      "source_segments": [
+        {"name": "canopy hunters", "first_event": 2, "last_event": 149, "time_offset": 0},
+        {"name": "river swarms", "first_event": 200, "last_event": 349, "time_offset": -100},
+        {"name": "spore bloom", "first_event": 553, "last_event": 710, "time_offset": -900},
+        {"name": "root descent", "first_event": 711, "last_event": 749, "time_offset": -800},
+        {"name": "living corridor", "first_event": 753, "last_event": 801, "time_offset": -700},
+        {"name": "rootmind awakening", "first_event": 802, "last_event": 893, "time_offset": -600},
+        {"name": "rootmind feeders left", "first_event": 895, "last_event": 898, "time_offset": -600},
+        {"name": "rootmind feeders right", "first_event": 900, "last_event": 911, "time_offset": -600},
+        {"name": "rootmind core preparation", "first_event": 917, "last_event": 934, "time_offset": -800},
+        {"name": "rootmind battle", "first_event": 937, "last_event": 1000, "time_offset": -800}
+      ],
+      "events": [
+        {"time": 0, "type": 44, "data1": 1, "data2": 5, "data3": -2, "comment": "Cast the jungle in a dark violet night filter."},
+        {"time": 5299, "type": 57, "data1": 6200, "comment": "Arm the Rootmind core's link-254 destruction exit as soon as it awakens."},
+        {"time": 5299, "type": 79, "data1": 254, "comment": "Show the Rootmind core health bar."},
+        {"time": 6000, "type": 2, "comment": "Freeze inside the nest until the Rootmind core is destroyed."},
+        {"time": 6000, "type": 53, "data1": 99, "comment": "Disable forced event movement while the boss gate is frozen."},
+        {"time": 6200, "type": 11, "data1": 1, "comment": "The destroyed Rootmind core jumps here to complete the mission."}
+      ]
+    },
+    {
+      "mission_title": "BLACK SUN",
+      "description": "A deep-space pursuit through wreckage, dead stations, a gravity scar, and the artificial Null Core.",
+      "briefing_title": "THE MAP ENDS HERE",
+      "briefing": [
+        "The Rootmind's star-map points beyond the rim.",
+        "No star burns there, only wreckage around a man-made void.",
+        "Cross the dead system and destroy whatever is feeding it."
+      ],
+      "song": 35,
+      "source_episode": 4,
+      "source_level": 14,
+      "map_source_episode": 4,
+      "map_source_level": 14,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 4,
+          "source_level": 14,
+          "tile": 71
+        },
+        "bands": [
+          {"name": "outer debris", "layer": 1, "source_episode": 5, "source_level": 2, "source_first_row": 40, "source_end_row": 70, "destination_row": 270},
+          {"name": "broken orbital", "layer": 1, "source_episode": 1, "source_level": 1, "source_first_row": 40, "source_end_row": 70, "destination_row": 240},
+          {"name": "red gravity scar", "layer": 1, "source_episode": 3, "source_level": 7, "source_first_row": 70, "source_end_row": 100, "destination_row": 180},
+          {"name": "asteroid foundry platforms", "layer": 1, "source_episode": 2, "source_level": 4, "source_first_row": 84, "source_end_row": 121, "destination_row": 204},
+          {"name": "drifting miner debris", "layer": 2, "source_episode": 5, "source_level": 6, "source_first_row": 450, "source_end_row": 550, "destination_row": 500},
+          {"name": "inner accretion veil", "layer": 2, "source_episode": 4, "source_level": 16, "source_first_row": 250, "source_end_row": 330, "destination_row": 310},
+          {"name": "near accretion veil", "layer": 3, "source_episode": 4, "source_level": 16, "source_first_row": 300, "source_end_row": 370, "destination_row": 350}
+        ],
+        "paint": [
+          {
+            "name": "clean upper foundry machinery",
+            "layer": 1,
+            "shape": 372,
+            "positions": [[5, 204], [6, 204], [7, 204], [8, 204], [9, 204], [10, 204], [5, 205], [6, 205], [9, 205], [10, 205], [5, 206], [7, 206], [8, 206], [10, 206]]
+          },
+          {
+            "name": "floor beneath the foundry node line",
+            "layer": 1,
+            "shape": 372,
+            "positions": [[0, 240], [1, 240], [2, 240], [3, 240], [4, 240], [5, 240], [6, 240], [7, 240], [8, 240], [9, 240], [10, 240], [11, 240], [12, 240], [13, 240]]
+          },
+          {
+            "name": "floor beneath the upper foundry defender line",
+            "layer": 1,
+            "shape": 400,
+            "positions": [[4, 207], [5, 207], [6, 207], [7, 207], [8, 207], [9, 207], [10, 207]]
+          },
+          {
+            "name": "clean outer debris platform",
+            "layer": 1,
+            "shape": 372,
+            "positions": [[4, 296], [7, 297], [8, 297], [9, 297], [10, 297], [13, 297]]
+          },
+          {
+            "name": "clean orbital platform floors",
+            "layer": 1,
+            "shape": 372,
+            "positions": [[2, 253], [2, 254], [2, 256], [2, 257], [8, 258], [9, 258], [8, 259], [9, 259], [7, 260], [8, 260], [9, 260], [11, 265]]
+          },
+          {
+            "name": "clean orbital platform corridor",
+            "layer": 1,
+            "shape": 390,
+            "positions": [[8, 264], [9, 264], [8, 265], [9, 265]]
+          },
+          {
+            "name": "clean foundry machinery floor",
+            "layer": 1,
+            "shape": 400,
+            "positions": [[5, 217], [8, 219], [11, 226]]
+          },
+          {
+            "name": "repair foundry panel left",
+            "layer": 1,
+            "shape": 416,
+            "positions": [[3, 223]]
+          },
+          {
+            "name": "repair foundry panel right",
+            "layer": 1,
+            "shape": 418,
+            "positions": [[4, 223]]
+          },
+          {
+            "name": "clean foundry combat lanes",
+            "layer": 1,
+            "shape": 390,
+            "positions": [[9, 223], [10, 223], [11, 223], [9, 224], [10, 224], [11, 224], [4, 228], [6, 228], [7, 228], [9, 228], [4, 229], [6, 229], [7, 229], [9, 229]]
+          },
+          {
+            "name": "clean foundry warning deck",
+            "layer": 1,
+            "shape": 372,
+            "positions": [[10, 231], [11, 232], [12, 233], [2, 234]]
+          }
+        ],
+        "forbidden_shapes": [
+          {
+            "name": "BLACK SUN platform bands",
+            "layer": 1,
+            "first_row": 204,
+            "end_row": 300,
+            "shapes": [299, 300, 309, 310, 318, 328, 358, 359, 360, 385, 423, 424, 433, 434]
+          }
+        ]
+      },
+      "ground_support_check": {
+        "name": "live foundry defenders",
+        "first_time": 1400,
+        "end_time": 2500,
+        "event_types": [6],
+        "void_shapes": [1, 60],
+        "row_origin": 290,
+        "minimum_checked": 40
+      },
+      "preamble_source_events": [1, 2, 3],
+      "boss_gate": {
+        "freeze_time": 5500,
+        "jump_target": 5700,
+        "boss_link": 254,
+        "minimum_linked_spawns": 10,
+        "require_damage_override": true,
+        "stationary": true
+      },
+      "source_segments": [
+        {"name": "outer dreadnought", "first_event": 8, "last_event": 104, "time_offset": 0},
+        {"name": "outer dreadnought crossfire", "first_event": 106, "last_event": 129, "time_offset": 0},
+        {"name": "outer dreadnought retreat", "first_event": 131, "last_event": 149, "time_offset": 0},
+        {
+          "name": "live orbital platform defenses",
+          "source_episode": 1,
+          "source_level": 1,
+          "first_event": 152,
+          "last_event": 208,
+          "time_scale": 2,
+          "time_offset": -5600,
+          "exclude_event_types": [45]
+        },
+        {
+          "name": "live foundry defenses one",
+          "source_episode": 2,
+          "source_level": 4,
+          "first_event": 340,
+          "last_event": 381,
+          "time_offset": -3360,
+          "exclude_event_types": [4, 45],
+          "exclude_enemy_ids": [325, 338, 339]
+        },
+        {
+          "name": "live foundry defenses two",
+          "source_episode": 2,
+          "source_level": 4,
+          "first_event": 392,
+          "last_event": 416,
+          "time_offset": -3360,
+          "exclude_event_types": [4, 45],
+          "exclude_enemy_ids": [325, 338, 339]
+        },
+        {"name": "gravity interceptors", "first_event": 474, "last_event": 650, "time_offset": 0},
+        {"name": "null core escort", "first_event": 756, "last_event": 759, "time_offset": -830},
+        {"name": "null core assembly two", "first_event": 761, "last_event": 790, "time_offset": -830},
+        {"name": "null core assembly three", "first_event": 792, "last_event": 830, "time_offset": -830},
+        {"name": "null core outer arms", "first_event": 832, "last_event": 833, "time_offset": -830},
+        {"name": "null core inner arms", "first_event": 835, "last_event": 891, "time_offset": -830},
+        {"name": "null core counterattack", "first_event": 893, "last_event": 961, "time_offset": -830},
+        {"name": "null core final ring", "first_event": 963, "last_event": 964, "time_offset": -830},
+        {"name": "null core battle", "first_event": 966, "last_event": 1018, "time_offset": -830}
+      ],
+      "events": [
+        {"time": 0, "type": 2, "data1": 1, "data2": 2, "data3": 2, "comment": "Drive all three parallax layers through the outer wreck field."},
+        {"time": 640, "type": 41, "comment": "Clear the departing dreadnought before the orbital defense grid arrives."},
+        {"time": 640, "type": 5, "data1": 8, "data2": 23, "data3": 20, "comment": "Load the live orbital and foundry defense shapes."},
+        {"time": 2700, "type": 41, "comment": "Clear the last platform defenders before the gravity scar."},
+        {"time": 2750, "type": 5, "data1": 33, "data2": 31, "data3": 34, "data4": 28, "comment": "Restore the deep-space enemy shapes for the gravity interceptors and Null Core."},
+        {"time": 3350, "type": 8, "comment": "Extinguish the starfield as the ship crosses the gravity scar."},
+        {"time": 3850, "type": 44, "data1": 2, "data2": -99, "data3": 0, "data4": 7, "data5": 1, "comment": "Flash into the Black Sun's red accretion spectrum."},
+        {"time": 4100, "type": 9, "comment": "Relight the distorted stars around the Null Core."},
+        {"time": 4100, "type": 1, "data1": 6, "comment": "Accelerate the distorted starfield at the final approach."},
+        {"time": 4000, "type": 41, "comment": "Clear the gravity-scar defenders before constructing the final entity."},
+        {"time": 4200, "type": 2, "comment": "Stop at the center of the artificial sun."},
+        {"time": 4200, "type": 53, "comment": "Continue the scripted Null Core assembly while space is stationary."},
+        {"time": 4200, "type": 17, "data1": 317, "data2": 142, "data5": -116, "data4": 254, "comment": "Anchor the Null Core's upper-left hull on screen."},
+        {"time": 4200, "type": 17, "data1": 318, "data2": 166, "data5": -116, "data4": 254, "comment": "Anchor the Null Core's upper-right hull on screen."},
+        {"time": 4200, "type": 17, "data1": 315, "data2": 130, "data5": -102, "data4": 254, "comment": "Anchor the Null Core's left shoulder on screen."},
+        {"time": 4200, "type": 17, "data1": 316, "data2": 178, "data5": -102, "data4": 254, "comment": "Anchor the Null Core's right shoulder on screen."},
+        {"time": 4200, "type": 17, "data1": 312, "data2": 130, "data5": -88, "data4": 254, "comment": "Anchor the Null Core's middle-left hull on screen."},
+        {"time": 4200, "type": 17, "data1": 313, "data2": 154, "data5": -88, "data4": 254, "comment": "Anchor the Null Core's central reactor on screen."},
+        {"time": 4200, "type": 17, "data1": 314, "data2": 178, "data5": -88, "data4": 254, "comment": "Anchor the Null Core's middle-right hull on screen."},
+        {"time": 4200, "type": 17, "data1": 309, "data2": 130, "data5": -60, "data4": 254, "comment": "Anchor the Null Core's lower-left hull on screen."},
+        {"time": 4200, "type": 17, "data1": 310, "data2": 154, "data5": -60, "data4": 254, "comment": "Anchor the Null Core's lower-center hull on screen."},
+        {"time": 4200, "type": 17, "data1": 311, "data2": 178, "data5": -60, "data4": 254, "comment": "Anchor the Null Core's lower-right hull on screen."},
+        {"time": 4200, "type": 57, "data1": 5700, "comment": "Arm the Null Core's link-254 destruction exit."},
+        {"time": 4200, "type": 79, "data1": 254, "comment": "Show the Null Core health bar."},
+        {"time": 4201, "type": 25, "data1": 180, "data4": 254, "comment": "Make every visible Null Core component destructible."},
+        {"time": 4201, "type": 31, "data1": 35, "data2": 45, "data3": 55, "data4": 254, "comment": "Activate the Null Core's three weapon circuits."},
+        {"time": 5500, "type": 2, "comment": "Freeze the encounter clock after every boss phase has spawned."},
+        {"time": 5500, "type": 53, "data1": 99, "comment": "Wait indefinitely for the Null Core to be destroyed."},
+        {"time": 5700, "type": 11, "data1": 1, "comment": "The destroyed Null Core jumps here to complete the mission."}
+      ]
+    },
+    {
+      "mission_title": "PALE EDEN",
+      "description": "A false paradise concealed beyond the Black Sun, glitching through coral, garden, asteroid machinery, geode engines, and the Deliani vault.",
+      "briefing_title": "BEYOND THE BLACK SUN",
+      "briefing": [
+        "The dying core opens a gate around your ship.",
+        "Beyond it: blue skies, green gardens, no star.",
+        "Every horizon is a wall. Find the machine beneath paradise."
+      ],
+      "song": 35,
+      "source_episode": 5,
+      "source_level": 7,
+      "map_source_episode": 1,
+      "map_source_level": 5,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 1,
+          "source_level": 5,
+          "tile": 71
+        },
+        "bands": [
+          {
+            "name": "coral aperture",
+            "layer": 1,
+            "source_episode": 5,
+            "source_level": 7,
+            "source_first_row": 0,
+            "source_end_row": 35,
+            "destination_row": 265
+          },
+          {
+            "name": "Harvest machine garden",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 1,
+            "source_first_row": 180,
+            "source_end_row": 220,
+            "destination_row": 225
+          },
+          {
+            "name": "Asteroid City machine",
+            "layer": 1,
+            "source_episode": 2,
+            "source_level": 4,
+            "source_first_row": 150,
+            "source_end_row": 175,
+            "destination_row": 200
+          },
+          {
+            "name": "geode engine",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 16,
+            "source_first_row": 180,
+            "source_end_row": 220,
+            "destination_row": 160
+          },
+          {
+            "name": "Deliani vault",
+            "layer": 1,
+            "source_episode": 1,
+            "source_level": 5,
+            "source_first_row": 220,
+            "source_end_row": 280,
+            "destination_row": 100
+          },
+          {
+            "name": "geode middle engine",
+            "layer": 2,
+            "source_episode": 4,
+            "source_level": 16,
+            "source_first_row": 370,
+            "source_end_row": 450,
+            "destination_row": 330
+          },
+          {
+            "name": "Deliani middle machinery",
+            "layer": 2,
+            "source_episode": 1,
+            "source_level": 5,
+            "source_first_row": 450,
+            "source_end_row": 570,
+            "destination_row": 210
+          },
+          {
+            "name": "Harvest foreground machinery",
+            "layer": 3,
+            "source_episode": 4,
+            "source_level": 1,
+            "source_first_row": 260,
+            "source_end_row": 380,
+            "destination_row": 395
+          },
+          {
+            "name": "geode foreground engine",
+            "layer": 3,
+            "source_episode": 4,
+            "source_level": 16,
+            "source_first_row": 260,
+            "source_end_row": 380,
+            "destination_row": 200
+          },
+          {
+            "name": "Deliani foreground machinery",
+            "layer": 3,
+            "source_episode": 1,
+            "source_level": 5,
+            "source_first_row": 380,
+            "source_end_row": 560,
+            "destination_row": 20
+          }
+        ],
+        "transitions": [
+          {
+            "name": "Coral aperture fracture",
+            "layer": 1,
+            "boundary_row": 265,
+            "column_offsets": [0, 1, 3, 5, 4, 2, 1, 2, 4, 5, 3, 1, 0, 2],
+            "before": {
+              "source_episode": 4,
+              "source_level": 1,
+              "source_row_offset": -45
+            },
+            "after": {
+              "source_episode": 5,
+              "source_level": 7,
+              "source_row_offset": -265
+            }
+          },
+          {
+            "name": "Harvest collapse",
+            "layer": 1,
+            "boundary_row": 225,
+            "column_offsets": [-1, -3, -5, -4, -2, 0, -2, -4, -5, -3, -1, 0, -2, -4],
+            "before": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": -50
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 1,
+              "source_row_offset": -45
+            }
+          },
+          {
+            "name": "Asteroid machine rupture",
+            "layer": 1,
+            "boundary_row": 200,
+            "column_offsets": [4, 2, 0, 1, 3, 5, 4, 2, 1, 3, 5, 4, 2, 0],
+            "before": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 20
+            },
+            "after": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": -50
+            }
+          },
+          {
+            "name": "Geode-to-Deliani fault",
+            "layer": 1,
+            "boundary_row": 160,
+            "column_offsets": [-4, -2, 1, 4, 5, 2, -1, -5, -3, 0, 3, 5, 2, -2],
+            "before": {
+              "source_episode": 1,
+              "source_level": 5,
+              "source_row_offset": 120
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 20
+            }
+          },
+          {
+            "name": "Harvest foreground arrival",
+            "layer": 3,
+            "boundary_row": 515,
+            "column_offsets": [0, 1, 3, 5, 4, 2, 1, 0, 2, 4, 5, 3, 1, 0, 2],
+            "before": {
+              "source_episode": 4,
+              "source_level": 1,
+              "source_row_offset": -135
+            },
+            "after": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": -270
+            }
+          },
+          {
+            "name": "Harvest foreground collapse",
+            "layer": 3,
+            "boundary_row": 395,
+            "column_offsets": [-2, -4, -5, -3, -1, 0, -2, -5, -4, -2, 0, -1, -3, -5, -2],
+            "before": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": -150
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 1,
+              "source_row_offset": -135
+            }
+          },
+          {
+            "name": "geode middle arrival",
+            "layer": 2,
+            "boundary_row": 410,
+            "column_offsets": [3, 1, 0, 2, 4, 5, 3, 1, 2, 4, 5, 3, 1, 0],
+            "before": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 40
+            },
+            "after": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": -100
+            }
+          },
+          {
+            "name": "geode foreground arrival",
+            "layer": 3,
+            "boundary_row": 320,
+            "column_offsets": [3, 1, 0, 2, 4, 5, 3, 1, 2, 4, 5, 3, 1, 0, 2],
+            "before": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 60
+            },
+            "after": {
+              "source_episode": 2,
+              "source_level": 4,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "geode middle Deliani fault",
+            "layer": 2,
+            "boundary_row": 330,
+            "column_offsets": [-4, -2, 1, 4, 5, 2, -1, -5, -3, 0, 3, 5, 2, -2],
+            "before": {
+              "source_episode": 1,
+              "source_level": 5,
+              "source_row_offset": 240
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 40
+            }
+          },
+          {
+            "name": "geode foreground Deliani fault",
+            "layer": 3,
+            "boundary_row": 200,
+            "column_offsets": [-4, -2, 1, 4, 5, 2, -1, -5, -3, 0, 3, 5, 2, -2, -4],
+            "before": {
+              "source_episode": 1,
+              "source_level": 5,
+              "source_row_offset": 360
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 16,
+              "source_row_offset": 60
+            }
+          }
+        ]
+      },
+      "preamble_source_events": [1],
+      "boss_gate": {
+        "freeze_time": 5200,
+        "jump_target": 5400,
+        "boss_link": 254,
+        "minimum_linked_spawns": 12,
+        "require_damage_override": true,
+        "stationary": true
+      },
+      "source_segments": [
+        {
+          "name": "coral sentries",
+          "first_event": 2,
+          "last_event": 132,
+          "time_offset": 0,
+          "exclude_event_types": [6, 11, 36, 58, 59]
+        },
+        {
+          "name": "Harvest garden patrol",
+          "source_episode": 4,
+          "source_level": 1,
+          "first_event": 385,
+          "last_event": 473,
+          "time_offset": -1260,
+          "exclude_event_types": [11, 16, 36, 66]
+        },
+        {
+          "name": "Asteroid City defenders",
+          "source_episode": 2,
+          "source_level": 4,
+          "first_event": 209,
+          "last_event": 284,
+          "time_offset": -1400,
+          "exclude_event_types": [11, 36, 60, 61],
+          "exclude_enemy_ids": [313, 338, 339, 531]
+        },
+        {
+          "name": "Nose Drip geode machines",
+          "source_episode": 4,
+          "source_level": 16,
+          "first_event": 415,
+          "last_event": 497,
+          "time_offset": -480,
+          "exclude_event_types": [11, 36, 54, 57, 70, 71, 79]
+        },
+        {
+          "name": "Dread-Not cave incursion",
+          "source_episode": 4,
+          "source_level": 14,
+          "first_event": 2,
+          "last_event": 120,
+          "time_offset": 3021,
+          "exclude_event_types": [2, 5, 9, 11, 13, 36, 46, 48, 53, 64, 65, 70, 79]
+        },
+        {
+          "name": "Deliani vault defenses",
+          "source_episode": 1,
+          "source_level": 5,
+          "first_event": 39,
+          "last_event": 210,
+          "time_offset": 3360,
+          "exclude_event_types": [11, 36]
+        }
+      ],
+      "random_waves": [
+        {
+          "name": "New Deli garden glitches",
+          "source_episode": 3,
+          "seed": 60701,
+          "start": 1120,
+          "end": 1740,
+          "count": 8,
+          "enemies": [600],
+          "types": [7, 15],
+          "x_min": 24,
+          "x_max": 256,
+          "y_speeds": [1, 2, 3],
+          "link_start": 200
+        },
+        {
+          "name": "cross-timeline AstCity ambush",
+          "source_episode": 3,
+          "seed": 60702,
+          "start": 2050,
+          "end": 2440,
+          "count": 7,
+          "enemies": [689],
+          "types": [12, 15],
+          "x_min": 28,
+          "x_max": 244,
+          "y_speeds": [1, 2],
+          "fixed_y": [0, 1],
+          "link_start": 210
+        },
+        {
+          "name": "Deliani unpredictable sentries",
+          "source_episode": 1,
+          "seed": 60703,
+          "start": 4040,
+          "end": 4740,
+          "count": 12,
+          "enemies": [226, 227, 259, 559],
+          "types": [7, 15, 23],
+          "x_min": 20,
+          "x_max": 260,
+          "y_speeds": [1, 2, 3],
+          "y_offsets": [-12, 0, 12],
+          "link_start": 220
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "type": 2,
+          "data1": 1,
+          "data2": 2,
+          "data3": 3,
+          "comment": "Move all five Pale Eden biome glitches with aligned parallax."
+        },
+        {
+          "time": 700,
+          "type": 41,
+          "comment": "Clear the aquatic sentries as the Coral aperture collapses."
+        },
+        {
+          "time": 700,
+          "type": 5,
+          "data1": 7,
+          "data2": 25,
+          "data3": 24,
+          "data4": 33,
+          "comment": "Load Harvest and cross-timeline New Deli defenders."
+        },
+        {
+          "time": 1820,
+          "type": 41,
+          "comment": "Erase the Harvest patrol when Asteroid City phases in."
+        },
+        {
+          "time": 1820,
+          "type": 5,
+          "data1": 8,
+          "data2": 23,
+          "data3": 20,
+          "data4": 4,
+          "comment": "Load Episode 2 and Episode 3 Asteroid City machines and their launched drones."
+        },
+        {
+          "time": 2520,
+          "type": 41,
+          "comment": "Clear the city machines as the geode engine seals around the ship."
+        },
+        {
+          "time": 2520,
+          "type": 5,
+          "data1": 32,
+          "data2": 33,
+          "data3": 31,
+          "data4": 34,
+          "comment": "Load the Nose Drip geode-engine defense banks."
+        },
+        {
+          "time": 3020,
+          "type": 41,
+          "comment": "Interrupt the geode defenders with a Dread-Not incursion."
+        },
+        {
+          "time": 3020,
+          "type": 5,
+          "data1": 33,
+          "data2": 31,
+          "data3": 34,
+          "data4": 28,
+          "comment": "Load the surprise Dread-Not fleet banks."
+        },
+        {
+          "time": 3640,
+          "type": 41,
+          "comment": "Erase the fleet fragments as the real Deliani vault appears."
+        },
+        {
+          "time": 3640,
+          "type": 5,
+          "data1": 7,
+          "data2": 25,
+          "data3": 24,
+          "comment": "Load the Deliani vault and randomized sentry banks."
+        },
+        {
+          "time": 4999,
+          "type": 41,
+          "comment": "Clear the last sanctuary defenders before SERAPH-0 descends."
+        },
+        {
+          "time": 4999,
+          "type": 5,
+          "data1": 24,
+          "data2": 16,
+          "comment": "Load the Deliani guardian and destruction-drop shape banks."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 400,
+          "data2": 60,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment one."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 401,
+          "data2": 84,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment two."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 402,
+          "data2": 108,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment three."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 403,
+          "data2": 132,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment four."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 404,
+          "data2": 156,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment five."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 405,
+          "data2": 180,
+          "data5": -128,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 top segment six."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 406,
+          "data2": 60,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment one."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 407,
+          "data2": 84,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment two."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 408,
+          "data2": 108,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment three."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 409,
+          "data2": 132,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment four."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 410,
+          "data2": 156,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment five."
+        },
+        {
+          "time": 5000,
+          "type": 18,
+          "source_episode": 1,
+          "data1": 411,
+          "data2": 180,
+          "data5": -100,
+          "data4": 254,
+          "comment": "Anchor SERAPH-0 lower segment six."
+        },
+        {
+          "time": 5000,
+          "type": 57,
+          "data1": 5400,
+          "comment": "Arm SERAPH-0's link-254 destruction exit."
+        },
+        {
+          "time": 5000,
+          "type": 79,
+          "data1": 254,
+          "comment": "Show SERAPH-0's health bar."
+        },
+        {
+          "time": 5029,
+          "type": 25,
+          "data1": 170,
+          "data4": 254,
+          "comment": "Make every visible SERAPH-0 component destructible."
+        },
+        {
+          "time": 5029,
+          "type": 31,
+          "data1": 35,
+          "data2": 45,
+          "data3": 55,
+          "data4": 254,
+          "comment": "Activate SERAPH-0's three Deliani weapon circuits."
+        },
+        {
+          "time": 5200,
+          "type": 2,
+          "comment": "Freeze the incubation vault after the complete boss has arrived."
+        },
+        {
+          "time": 5200,
+          "type": 53,
+          "data1": 99,
+          "comment": "Wait indefinitely for SERAPH-0 to be destroyed."
+        },
+        {
+          "time": 5400,
+          "type": 11,
+          "data1": 1,
+          "comment": "Only SERAPH-0's destruction can complete Pale Eden."
+        }
+      ]
+    },
+    {
+      "mission_title": "LAST WORD",
+      "description": "SERAPH-0 opens into the buried broadcast cathedral where the First Voice manufactures language from machinery and living red signal tissue.",
+      "briefing_title": "ENTER THE TRANSMISSION",
+      "briefing": [
+        "SERAPH-0 was not guarding a fleet. It was sealing a mouth.",
+        "Below Pale Eden, a machine turns living tissue into orders.",
+        "Descend through the transmission. Silence the First Voice."
+      ],
+      "song": 38,
+      "source_episode": 4,
+      "source_level": 7,
+      "map_source_episode": 4,
+      "map_source_level": 7,
+      "map_style": "composite",
+      "background": {
+        "base_fill": {
+          "layer": 1,
+          "source_episode": 4,
+          "source_level": 7,
+          "tile": 13
+        },
+        "bands": [
+          {
+            "name": "sealed broadcast cathedral",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 248,
+            "source_end_row": 300,
+            "destination_row": 248
+          },
+          {
+            "name": "red-lit command foundry",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 205,
+            "source_end_row": 248,
+            "destination_row": 205
+          },
+          {
+            "name": "choir machine nave",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 162,
+            "source_end_row": 205,
+            "destination_row": 162
+          },
+          {
+            "name": "black iron choir",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 130,
+            "source_end_row": 162,
+            "destination_row": 130
+          },
+          {
+            "name": "First Voice throne",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 15,
+            "source_first_row": 80,
+            "source_end_row": 130,
+            "destination_row": 80
+          },
+          {
+            "name": "deep transmitter foundation",
+            "layer": 1,
+            "source_episode": 4,
+            "source_level": 15,
+            "source_first_row": 0,
+            "source_end_row": 80,
+            "destination_row": 0
+          },
+          {
+            "name": "cathedral middle silence",
+            "layer": 2,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 526,
+            "source_end_row": 600,
+            "destination_row": 526
+          },
+          {
+            "name": "transmission middle silence",
+            "layer": 2,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 462,
+            "source_end_row": 527,
+            "destination_row": 462
+          },
+          {
+            "name": "throne middle machinery",
+            "layer": 2,
+            "source_episode": 4,
+            "source_level": 15,
+            "source_first_row": 200,
+            "source_end_row": 250,
+            "destination_row": 200
+          },
+          {
+            "name": "cathedral foreground silence",
+            "layer": 3,
+            "source_episode": 4,
+            "source_level": 7,
+            "source_first_row": 494,
+            "source_end_row": 600,
+            "destination_row": 494
+          },
+          {
+            "name": "throne foreground machinery",
+            "layer": 3,
+            "source_episode": 4,
+            "source_level": 15,
+            "source_first_row": 50,
+            "source_end_row": 150,
+            "destination_row": 50
+          }
+        ],
+        "transitions": [
+          {
+            "name": "cathedral wall opens into the command foundry",
+            "layer": 1,
+            "boundary_row": 248,
+            "column_offsets": [0, 2, 5, 3, 1, -2, -4, -1, 2, 4, 1, -3, -5, -1],
+            "before": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "command foundry enters the choir nave",
+            "layer": 1,
+            "boundary_row": 205,
+            "column_offsets": [-4, -2, 1, 4, 5, 2, -1, -5, -3, 0, 3, 5, 2, -2],
+            "before": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "choir nave enters the black iron chamber",
+            "layer": 1,
+            "boundary_row": 162,
+            "column_offsets": [5, 3, 1, -2, -5, -3, 0, 4, 2, -1, -4, -2, 1, 4],
+            "before": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "black iron fractures into the First Voice throne",
+            "layer": 1,
+            "boundary_row": 130,
+            "column_offsets": [-5, -3, 0, 3, 5, 2, -2, -4, -1, 2, 4, 1, -3, -5],
+            "before": {
+              "source_episode": 4,
+              "source_level": 15,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "middle layer remains absent",
+            "layer": 2,
+            "boundary_row": 526,
+            "column_offsets": [0, 1, 3, 5, 4, 2, -1, -3, -5, -2, 1, 4, 2, -1],
+            "before": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          },
+          {
+            "name": "foreground layer remains absent",
+            "layer": 3,
+            "boundary_row": 494,
+            "column_offsets": [2, 4, 5, 3, 0, -3, -5, -2, 1, 4, 2, -1, -4, -2, 1],
+            "before": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            },
+            "after": {
+              "source_episode": 4,
+              "source_level": 7,
+              "source_row_offset": 0
+            }
+          }
+        ]
+      },
+      "preamble_source_events": [],
+      "boss_gate": {
+        "freeze_time": 5200,
+        "jump_target": 5400,
+        "boss_link": 254,
+        "minimum_linked_spawns": 31,
+        "require_damage_override": true,
+        "require_motion_neutralization": true,
+        "stationary": true
+      },
+      "source_segments": [
+        {
+          "name": "broadcast cathedral sentries",
+          "source_episode": 4,
+          "source_level": 7,
+          "first_event": 0,
+          "last_event": 347,
+          "time_offset": 0,
+        "exclude_event_types": [0, 2, 5, 8, 13, 37, 64]
+        },
+        {
+          "name": "living alphabet swarm",
+          "source_episode": 1,
+          "source_level": 4,
+          "first_event": 0,
+          "last_event": 149,
+          "time_offset": 1200,
+        "exclude_event_types": [0, 2, 5, 8, 13, 37, 44]
+        },
+        {
+          "name": "stargate syntax guardians",
+          "source_episode": 3,
+          "source_level": 7,
+          "first_event": 0,
+          "last_event": 179,
+          "time_offset": 2400,
+        "exclude_event_types": [0, 2, 5, 8, 13, 37]
+        },
+        {
+          "name": "black iron choir",
+          "source_episode": 4,
+          "source_level": 7,
+          "first_event": 585,
+          "last_event": 666,
+          "time_offset": 0,
+        "exclude_event_types": [0, 2, 16, 37, 46]
+        },
+        {
+          "name": "last red syllable",
+          "source_episode": 1,
+          "source_level": 4,
+          "first_event": 180,
+          "last_event": 191,
+          "time_offset": -640,
+        "exclude_event_types": [33, 37, 45]
+        }
+      ],
+      "random_waves": [
+        {
+          "name": "escaped red phonemes",
+          "source_episode": 1,
+          "seed": 60808,
+          "start": 4420,
+          "end": 4780,
+          "count": 14,
+          "enemies": [464, 465],
+          "types": [6, 10],
+          "x_min": 24,
+          "x_max": 252,
+          "y_speeds": [0, 1, 2],
+          "y_offsets": [-24, -12, 0],
+          "link_start": 230
+        }
+      ],
+      "events": [
+        {
+          "time": 0,
+          "type": 2,
+          "data1": 1,
+          "data2": 2,
+          "data3": 3,
+          "comment": "Descend through the sealed broadcast cathedral."
+        },
+      {
+        "time": 0,
+        "type": 8,
+        "comment": "There is no sky inside the transmission."
+      },
+      {
+        "time": 0,
+        "type": 37,
+        "data1": 100,
+        "comment": "Disable UnderDeli's bank-4 ambient spawn table; every Last Word encounter is authored."
+      },
+      {
+        "time": 0,
+        "type": 5,
+          "data1": 33,
+          "data2": 32,
+          "data3": 34,
+          "data4": 28,
+          "comment": "Load the UnderDeli cathedral guardians."
+        },
+        {
+          "time": 1200,
+          "type": 41,
+          "comment": "Erase the cathedral sentries when the walls become language."
+        },
+        {
+          "time": 1200,
+          "type": 5,
+          "data1": 9,
+          "comment": "Load the living alphabet swarm."
+        },
+        {
+          "time": 1200,
+          "type": 44,
+          "data1": 2,
+          "data2": -99,
+          "data4": 7,
+          "data5": 1,
+          "comment": "Flood the command foundry with the transmission's red spectrum."
+        },
+        {
+          "time": 2400,
+          "type": 41,
+          "comment": "Clear the loose red cells before the syntax engine closes."
+        },
+        {
+          "time": 2400,
+          "type": 5,
+          "data1": 9,
+          "data2": 20,
+          "comment": "Load the Stargate syntax guardians."
+        },
+        {
+          "time": 3600,
+          "type": 41,
+          "comment": "Silence the syntax guardians before entering the black iron choir."
+        },
+        {
+          "time": 3600,
+          "type": 5,
+          "data1": 33,
+          "data2": 32,
+          "data3": 34,
+          "data4": 28,
+          "comment": "Reload the UnderDeli choir guardians."
+        },
+        {
+          "time": 3600,
+          "type": 44,
+          "comment": "Let the red spectrum die at the door of the black iron choir."
+        },
+        {
+          "time": 4400,
+          "type": 41,
+          "comment": "Clear the choir before the final red syllables escape."
+        },
+        {
+          "time": 4400,
+          "type": 5,
+          "data1": 9,
+          "comment": "Return to the living alphabet bank for the final breach."
+        },
+        {
+          "time": 4899,
+          "type": 41,
+          "comment": "Clear every escaped syllable before the First Voice manifests."
+        },
+        {
+          "time": 4899,
+          "type": 8,
+          "comment": "Keep the cathedral skyless as the First Voice takes form."
+        },
+        {
+          "time": 4999,
+          "type": 5,
+          "data1": 35,
+          "data2": 36,
+          "comment": "Keep both Episode 5 banks loaded for the complete First Voice."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1265,
+          "data2": 48,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 1."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1266,
+          "data2": 72,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 2."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1267,
+          "data2": 96,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 3."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1268,
+          "data2": 120,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 4."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1269,
+          "data2": 144,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 5."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1270,
+          "data2": 168,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 6."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1271,
+          "data2": 192,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 7."
+        },
+        {
+          "time": 5028,
+          "type": 58,
+          "data1": 1272,
+          "data2": 216,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice crown segment 8."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1273,
+          "data2": 48,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 1."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1274,
+          "data2": 72,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 2."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1275,
+          "data2": 96,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 3."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1276,
+          "data2": 120,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 4."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1277,
+          "data2": 144,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 5."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1278,
+          "data2": 168,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 6."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1279,
+          "data2": 192,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 7."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1280,
+          "data2": 216,
+          "data5": -88,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 8."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1281,
+          "data2": 48,
+          "data5": -60,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice upper wing 9."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1282,
+          "data2": 72,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 1."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1283,
+          "data2": 96,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 2."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1284,
+          "data2": 120,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 3."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1285,
+          "data2": 144,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 4."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1286,
+          "data2": 168,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 5."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1287,
+          "data2": 192,
+          "data5": -60,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice heart segment 6."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1288,
+          "data2": 216,
+          "data5": -60,
+          "data6": 3,
+          "data4": 254,
+          "comment": "Anchor First Voice heart blade."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1289,
+          "data2": 84,
+          "data5": -32,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 1."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1290,
+          "data2": 108,
+          "data5": -32,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 2."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1291,
+          "data2": 132,
+          "data5": -32,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 3."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1292,
+          "data2": 156,
+          "data5": -32,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 4."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1293,
+          "data2": 180,
+          "data5": -32,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 5."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1294,
+          "data2": 120,
+          "data5": -4,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 6."
+        },
+        {
+          "time": 5000,
+          "type": 58,
+          "data1": 1295,
+          "data2": 144,
+          "data5": -4,
+          "data6": 1,
+          "data4": 254,
+          "comment": "Anchor First Voice lower wing 7."
+        },
+        {
+          "time": 5000,
+          "type": 57,
+          "data1": 5400,
+          "comment": "Arm the First Voice's link-254 destruction exit."
+        },
+        {
+          "time": 5000,
+          "type": 79,
+          "data1": 254,
+          "comment": "Show the First Voice health bar."
+        },
+        {
+          "time": 5001,
+          "type": 25,
+          "data1": 220,
+          "data4": 254,
+          "comment": "Make all 31 First Voice components destructible."
+        },
+        {
+          "time": 5001,
+          "type": 31,
+          "data1": 30,
+          "data2": 42,
+          "data3": 54,
+          "data4": 254,
+          "comment": "Activate the First Voice's three weapon circuits."
+        },
+        {
+          "time": 5029,
+          "type": 19,
+          "data1": 0,
+          "data2": 0,
+          "data4": 254,
+          "comment": "Zero the First Voice's intrinsic movement."
+        },
+        {
+          "time": 5029,
+          "type": 20,
+          "data1": 0,
+          "data2": 0,
+          "data4": 254,
+          "comment": "Zero the First Voice's intrinsic acceleration."
+        },
+        {
+          "time": 5029,
+          "type": 55,
+          "data1": 0,
+          "data2": 0,
+          "data4": 254,
+          "comment": "Disable the First Voice's acceleration reversals."
+        },
+        {
+          "time": 5200,
+          "type": 2,
+          "comment": "Freeze Last Word after the complete First Voice manifests."
+        },
+        {
+          "time": 5200,
+          "type": 53,
+          "data1": 99,
+          "comment": "Wait indefinitely for the First Voice to be destroyed."
+        },
+        {
+          "time": 5400,
+          "type": 11,
+          "data1": 1,
+          "comment": "Only the First Voice's destruction can complete Episode 6."
+        }
+      ]
+    }
+  ]
+}

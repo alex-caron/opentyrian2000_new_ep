@@ -19,6 +19,7 @@
 #include "params.h"
 
 #include "arg_parse.h"
+#include "episodes.h"
 #include "file.h"
 #include "joystick.h"
 #include "loudness.h"
@@ -31,9 +32,11 @@
 #include <ctype.h>
 #include <errno.h>
 #include <stdint.h>
+#include <stdlib.h>
 #include <string.h>
 
 JE_boolean richMode = false, constantPlay = false, constantDie = false;
+int requestedEpisode = 0;
 
 /* YKS: Note: LOOT cheat had non letters removed. */
 const char pars[][9] = {
@@ -51,6 +54,7 @@ void JE_paramCheck(int argc, char *argv[])
 		{ 'x', 'x', "no-xmas",           false },
 		
 		{ 't', 't', "data",              true },
+		{ 'e', 'e', "episode",           true },
 		
 		{ 'n', 'n', "net",               true },
 		{ 256, 0,   "net-player-name",   true }, // TODO: no short codes because there should
@@ -93,6 +97,7 @@ void JE_paramCheck(int argc, char *argv[])
 			       "  -j, --no-joystick            Disable joystick/gamepad input\n"
 			       "  -x, --no-xmas                Disable Christmas mode\n\n"
 			       "  -t, --data=DIR               Set Tyrian data directory\n\n"
+			       "  -e, --episode=NUMBER         Start a full game directly in an episode\n\n"
 			       "  -n, --net=HOST[:PORT]        Start a networked game\n"
 			       "  --net-player-name=NAME       Sets local player name in a networked game\n"
 			       "  --net-player-number=NUMBER   Sets local player number in a networked game\n"
@@ -121,6 +126,24 @@ void JE_paramCheck(int argc, char *argv[])
 		case 't':
 			custom_data_dir = option.arg;
 			break;
+
+		case 'e':
+		{
+			char *end = NULL;
+			const long episode = strtol(option.arg, &end, 10);
+			if (end != option.arg && *end == '\0' &&
+			    episode >= 1 && episode <= EPISODE_AVAILABLE)
+			{
+				requestedEpisode = episode;
+			}
+			else
+			{
+				fprintf(stderr, "%s: error: episode must be between 1 and %d\n",
+				        argv[0], EPISODE_AVAILABLE);
+				exit(EXIT_FAILURE);
+			}
+			break;
+		}
 			
 		case 'n':
 			isNetworkGame = true;
@@ -267,4 +290,7 @@ void JE_paramCheck(int argc, char *argv[])
 			}
 		}
 	}
+
+	if (constantPlay)
+		fprintf(stderr, "warning: --constant enables autoplay; controls and menus are not interactive\n");
 }

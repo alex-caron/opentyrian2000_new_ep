@@ -22,6 +22,7 @@
 #include "opentyr.h"
 
 extern JE_boolean richMode, constantPlay, constantDie;
+extern int requestedEpisode;
 
 void JE_paramCheck(int argc, char *argv[]);
 

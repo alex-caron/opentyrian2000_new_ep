@@ -779,6 +779,12 @@ int main(int argc, char *argv[])
 	JE_loadConfiguration();
 
 	JE_scanForEpisodes();
+	if (requestedEpisode != 0 && !episodeAvail[requestedEpisode - 1])
+	{
+		fprintf(stderr, "%s: error: episode %d data is not available in %s\n",
+		        argv[0], requestedEpisode, data_dir());
+		return EXIT_FAILURE;
+	}
 
 	init_video();
 	init_keyboard();
@@ -865,7 +871,18 @@ int main(int argc, char *argv[])
 		else
 #endif
 		{
-			if (!titleScreen())
+			if (requestedEpisode != 0)
+			{
+				JE_initEpisode(requestedEpisode);
+				initial_episode_num = episodeNum;
+				difficultyLevel = DIFFICULTY_NORMAL;
+				initialDifficulty = difficultyLevel;
+				player[0].cash = JE_episodeStartCash(episodeNum);
+				gameLoaded = true;
+				printf("starting episode %d directly\n", episodeNum);
+				requestedEpisode = 0;
+			}
+			else if (!titleScreen())
 			{
 				// Player quit from title screen.
 				break;

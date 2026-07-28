@@ -8,7 +8,9 @@ else
     TYRIAN_DIR = $(gamesdir)/opentyrian2000
 endif
 
-WITH_NETWORK := true
+# The base game only requires SDL2.  SDL2_net support can be enabled with:
+#     make WITH_NETWORK=true
+WITH_NETWORK ?= false
 
 ################################################################################
 
@@ -19,6 +21,7 @@ SHELL = /bin/sh
 CC ?= gcc
 INSTALL ?= install
 PKG_CONFIG ?= pkg-config
+SDL2_CONFIG ?= sdl2-config
 
 VCS_IDREV ?= (git describe --tags || git rev-parse --short HEAD)
 
@@ -67,20 +70,37 @@ CPPFLAGS += -DNDEBUG
 CFLAGS ?= -pedantic \
           -Wall \
           -Wextra \
-          -Wno-format-truncation \
           -Wno-missing-field-initializers \
           -O2
+ifneq ($(findstring clang,$(shell $(CC) --version 2>/dev/null)),clang)
+    CFLAGS += -Wno-format-truncation
+endif
 LDFLAGS ?=
 LDLIBS ?=
 
+PKG_CONFIG_FOUND := $(shell command -v $(PKG_CONFIG) 2>/dev/null)
+SDL2_CONFIG_FOUND := $(shell command -v $(SDL2_CONFIG) 2>/dev/null)
+
 ifeq ($(WITH_NETWORK), true)
+    ifeq ($(PKG_CONFIG_FOUND), )
+        $(error WITH_NETWORK=true requires pkg-config and SDL2_net; on macOS run: brew install pkgconf sdl2_net)
+    endif
     SDL_CPPFLAGS := $(shell $(PKG_CONFIG) sdl2 SDL2_net --cflags)
     SDL_LDFLAGS := $(shell $(PKG_CONFIG) sdl2 SDL2_net --libs-only-L --libs-only-other)
     SDL_LDLIBS := $(shell $(PKG_CONFIG) sdl2 SDL2_net --libs-only-l)
 else
-    SDL_CPPFLAGS := $(shell $(PKG_CONFIG) sdl2 --cflags)
-    SDL_LDFLAGS := $(shell $(PKG_CONFIG) sdl2 --libs-only-L --libs-only-other)
-    SDL_LDLIBS := $(shell $(PKG_CONFIG) sdl2 --libs-only-l)
+    ifneq ($(PKG_CONFIG_FOUND), )
+        SDL_CPPFLAGS := $(shell $(PKG_CONFIG) sdl2 --cflags)
+        SDL_LDFLAGS := $(shell $(PKG_CONFIG) sdl2 --libs-only-L --libs-only-other)
+        SDL_LDLIBS := $(shell $(PKG_CONFIG) sdl2 --libs-only-l)
+    else
+        ifneq ($(SDL2_CONFIG_FOUND), )
+            SDL_CPPFLAGS := $(shell $(SDL2_CONFIG) --cflags)
+            SDL_LDLIBS := $(shell $(SDL2_CONFIG) --libs)
+        else
+            $(error SDL2 was not found; on macOS run: brew install sdl2)
+        endif
+    endif
 endif
 
 ALL_CPPFLAGS = -DTARGET_$(PLATFORM) \

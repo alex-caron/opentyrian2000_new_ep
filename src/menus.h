@@ -19,10 +19,11 @@
 #ifndef MENUS_H
 #define MENUS_H
 
+#include "episodes.h"
 #include "opentyr.h"
 
 #define GAMEPLAY_NAME_COUNT 6
-extern char episode_name[6][31];
+extern char episode_name[EPISODE_MAX + 1][31];
 extern char difficulty_name[7][21];
 extern char gameplay_name[GAMEPLAY_NAME_COUNT][26];
 extern char timed_battle_name[4][23];

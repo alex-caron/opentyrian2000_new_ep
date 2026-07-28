@@ -24,6 +24,8 @@
 #include "lvlmast.h"
 #include "opentyr.h"
 
+#include <assert.h>
+
 /* MAIN Weapons Data */
 JE_WeaponPortType weaponPort;
 JE_WeaponType     weapons[WEAP_NUM + 1]; /* [0..weapnum] */
@@ -50,6 +52,19 @@ JE_boolean bonusLevel;
 
 /* Tells if the game jumped back to Episode 1 */
 JE_boolean jumpBackToEpisode1;
+
+ulong JE_episodeStartCash(JE_byte episode)
+{
+	/* Preserve the built-in episode values used by OpenTyrian2000 and give
+	 * the custom episode enough cash for its first progressive shop. */
+	static const ulong initial_cash[EPISODE_MAX] =
+	{
+		10000, 15000, 20000, 30000, 20000, 35000
+	};
+
+	assert(episode >= 1 && episode <= EPISODE_MAX);
+	return initial_cash[episode - 1];
+}
 
 void JE_loadItemDat(void)
 {

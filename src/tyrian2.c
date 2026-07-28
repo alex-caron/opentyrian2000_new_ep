@@ -162,7 +162,7 @@ inline static void blit_enemy(SDL_Surface *surface, unsigned int i, signed int x
 		return;
 	}
 	
-	const int x = enemy[i].ex + x_offset + tempMapXOfs,
+	const int x = enemy[i].ex + x_offset + enemy[i].mapoffset,
 	          y = enemy[i].ey + y_offset;
 	const unsigned int index = enemy[i].egr[enemy[i].enemycycle - 1] + sprite_offset;
 
@@ -180,7 +180,7 @@ void JE_drawEnemy(int enemyOffset) // actually does a whole lot more than just d
 	{
 		if (enemyAvail[i] != 1)
 		{
-			enemy[i].mapoffset = tempMapXOfs;
+			enemy[i].mapoffset = enemy[i].fixed_screen ? 0 : tempMapXOfs;
 
 			if (enemy[i].xaccel && enemy[i].xaccel - 89u > mt_rand() % 11)
 			{
@@ -210,7 +210,8 @@ void JE_drawEnemy(int enemyOffset) // actually does a whole lot more than just d
 				}
 			}
 
- 			if (enemy[i].ex + tempMapXOfs > -29 && enemy[i].ex + tempMapXOfs < 300)
+			if (enemy[i].ex + enemy[i].mapoffset > -29 &&
+			    enemy[i].ex + enemy[i].mapoffset < 300)
 			{
 				if (enemy[i].aniactive == 1)
 				{
@@ -331,7 +332,8 @@ enemy_still_exists:
 					enemy[i].ex--;
 			}
 
-			enemy[i].ey += tempBackMove;
+			if (!enemy[i].fixed_screen)
+				enemy[i].ey += tempBackMove;
 
 			if (enemy[i].ex <= -24 || enemy[i].ex >= 296)
 				goto draw_enemy_end;
@@ -381,8 +383,8 @@ enemy_still_exists:
 						case 252: /* Savara Boss DualMissile */
 							if (enemy[i].ey > 20)
 							{
-								JE_setupExplosion(tempX - 8 + tempMapXOfs, tempY - 20 - backMove * 8, -2, 6, false, false);
-								JE_setupExplosion(tempX + 4 + tempMapXOfs, tempY - 20 - backMove * 8, -2, 6, false, false);
+								JE_setupExplosion(tempX - 8 + enemy[i].mapoffset, tempY - 20 - backMove * 8, -2, 6, false, false);
+								JE_setupExplosion(tempX + 4 + enemy[i].mapoffset, tempY - 20 - backMove * 8, -2, 6, false, false);
 							}
 							break;
 						case 251:; /* Suck-O-Magnet */
@@ -461,7 +463,7 @@ enemy_still_exists:
 								if (j == 1)
 									temp2 = 4;
 
-								enemyShot[b].sx = tempX + weapons[temp3].bx[tempPos] + tempMapXOfs;
+								enemyShot[b].sx = tempX + weapons[temp3].bx[tempPos] + enemy[i].mapoffset;
 								enemyShot[b].sy = tempY + weapons[temp3].by[tempPos];
 								enemyShot[b].sdmg = weapons[temp3].attack[tempPos];
 								enemyShot[b].tx = weapons[temp3].tx;
@@ -524,7 +526,7 @@ enemy_still_exists:
 										}
 									}
 
-									JE_integer aimX = (targetX + 25) - tempX - tempMapXOfs - 4;
+									JE_integer aimX = (targetX + 25) - tempX - enemy[i].mapoffset - 4;
 									if (aimX == 0)
 										aimX = 1;
 									JE_integer aimY = targetY - tempY;
@@ -584,7 +586,7 @@ enemy_still_exists:
 							}
 							else
 							{
-								JE_integer aimX = (player[0].x + 25) - tempX - tempMapXOfs - 4;
+								JE_integer aimX = (player[0].x + 25) - tempX - enemy[i].mapoffset - 4;
 								if (aimX == 0)
 									aimX = 1;
 								JE_integer aimY = player[0].y - tempY;
@@ -742,7 +744,7 @@ start_level_first:
 		player[i].is_alive = true;
 
 	oldDifficultyLevel = difficultyLevel;
-	if (episodeNum == EPISODE_AVAILABLE)
+	if (episodeNum == EPISODE_BUILTIN_MAX)
 		difficultyLevel--;
 	if (difficultyLevel < DIFFICULTY_EASY)
 		difficultyLevel = DIFFICULTY_EASY;
@@ -2613,7 +2615,10 @@ new_game:
 
 							int j = 0, temp;
 							while (str_pop_int(buf, &temp))
-								itemAvail[i][j++] = temp;
+							{
+								if (j < (int)COUNTOF(itemAvail[i]))
+									itemAvail[i][j++] = temp;
+							}
 							itemAvailMax[i] = j;
 						}
 
@@ -2641,6 +2646,8 @@ new_game:
 
 					case 'Q':
 						ESCPressed = false;
+						const JE_boolean completedCustomEpisode =
+							episodeNum > EPISODE_BUILTIN_MAX;
 						temp = secretHint + (mt_rand() % 3) * 3;
 
 						if (twoPlayerMode)
@@ -2675,14 +2682,18 @@ new_game:
 
 						JE_wipeKey();
 						frameCountMax = 4;
-						if (!constantPlay)
+						/* The custom episode has just displayed its authored ending.
+						 * The legacy score/hint screen has no backing image here and
+						 * otherwise becomes an invisible, black input prompt. */
+						if (!constantPlay && !completedCustomEpisode)
 							JE_displayText();
 
 						fade_black(15);
 
 						JE_nextEpisode();
 
-						if (jumpBackToEpisode1 && !twoPlayerMode)
+						if (jumpBackToEpisode1 && !twoPlayerMode &&
+						    !completedCustomEpisode)
 						{
 							JE_loadPic(VGAScreen, 1, false); // huh?
 							JE_clr256(VGAScreen);
@@ -2739,6 +2750,11 @@ new_game:
 								return;
 							}
 						}
+
+						/* Leave the custom episode script and enter Episode 1's first
+						 * section. The built-in path sets this inside its unlock block. */
+						if (jumpBackToEpisode1 && completedCustomEpisode)
+							jumpSection = true;
 						break;
 
 					case 'P':
@@ -3663,10 +3679,8 @@ bool newGame(void)
 		{
 			// allows player to smuggle arcade/super-arcade ships into full game
 
-			const ulong initial_cash[] = { 10000, 15000, 20000, 30000, 20000 };
-
 			assert(episodeNum >= 1 && episodeNum <= EPISODE_AVAILABLE);
-			player[0].cash = initial_cash[episodeNum - 1];
+			player[0].cash = JE_episodeStartCash(episodeNum);
 		}
 	}
 
@@ -3934,7 +3948,10 @@ uint JE_makeEnemy(struct JE_SingleEnemyType *enemy, Uint16 eDatI, Sint16 uniqueS
 		enemy->sprite2s = sprite2s;
 	else
 		// Use shape table value from previous enemy that occupied the enemy slot. (Ex. APPROACH.)
-		fprintf(stderr, "warning: ignoring sprite from unloaded shape table %d\n", shapeTableI);
+		fprintf(stderr,
+		        "warning: ignoring sprite from unloaded shape table %d "
+		        "for enemy type %u at level time %u\n",
+		        shapeTableI, eDatI, curLoc);
 
 	enemy->enemydatofs = &enemyDat[eDatI];
 
@@ -4069,6 +4086,7 @@ uint JE_makeEnemy(struct JE_SingleEnemyType *enemy, Uint16 eDatI, Sint16 uniqueS
 	enemy->edlevel = enemyDat[eDatI].dlevel;
 
 	enemy->fixedmovey = 0;
+	enemy->fixed_screen = false;
 
 	enemy->filter = 0x00;
 
@@ -4956,12 +4974,52 @@ void JE_eventSystem(void)
 		superEnemy254Jump = eventRec[eventLoc-1].eventdat;
 		break;
 
-	case 58: // Set enemy launch
-		// This implementation comes from ArcTyr, and may not be 100% accurate to Tyrian 2000
-		for (temp = 0; temp < 100; temp++)
+	case 58:
+		if (episodeNum > EPISODE_BUILTIN_MAX)
 		{
-			if (eventRec[eventLoc-1].eventdat4 == 99 || enemy[temp].linknum == eventRec[eventLoc-1].eventdat4)
-				enemy[temp].launchtype = eventRec[eventLoc-1].eventdat;
+			/* Fixed screen-position enemy for authored custom episodes. */
+			const JE_integer fixed_x = eventRec[eventLoc-1].eventdat2;
+			const JE_shortint original_y_speed = eventRec[eventLoc-1].eventdat3;
+			const JE_shortint fixed_y = eventRec[eventLoc-1].eventdat5;
+			const JE_shortint slot_group = eventRec[eventLoc-1].eventdat6;
+
+			eventRec[eventLoc-1].eventdat2 = -99;
+			eventRec[eventLoc-1].eventdat3 = 0;
+			eventRec[eventLoc-1].eventdat5 = 0;
+			eventRec[eventLoc-1].eventdat6 = 0;
+			JE_createNewEventEnemy(0, slot_group * 25, 0);
+			eventRec[eventLoc-1].eventdat2 = fixed_x;
+			eventRec[eventLoc-1].eventdat3 = original_y_speed;
+			eventRec[eventLoc-1].eventdat5 = fixed_y;
+			eventRec[eventLoc-1].eventdat6 = slot_group;
+
+			if (b > 0)
+			{
+				enemy[b-1].ex = fixed_x;
+				enemy[b-1].ey = 128 + fixed_y;
+				enemy[b-1].exc = 0;
+				enemy[b-1].eyc = 0;
+				enemy[b-1].excc = 0;
+				enemy[b-1].eycc = 0;
+				enemy[b-1].exccw = 0;
+				enemy[b-1].eyccw = 0;
+				enemy[b-1].xaccel = 0;
+				enemy[b-1].yaccel = 0;
+				enemy[b-1].fixedmovey = 0;
+				enemy[b-1].fixed_screen = true;
+			}
+		}
+		else
+		{
+			/* Preserve OpenTyrian2000's Episode 5 launch-type event. */
+			for (temp = 0; temp < 100; temp++)
+			{
+				if (eventRec[eventLoc-1].eventdat4 == 99 ||
+				    enemy[temp].linknum == eventRec[eventLoc-1].eventdat4)
+				{
+					enemy[temp].launchtype = eventRec[eventLoc-1].eventdat;
+				}
+			}
 		}
 		break;
 
