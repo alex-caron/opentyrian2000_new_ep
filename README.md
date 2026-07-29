@@ -27,16 +27,26 @@ moon, an artificial black sun, a fractured machine paradise, and the buried
 cathedral of the First Voice. Each mission has its own scenery and encounter
 style instead of repeating a single visual theme.
 
-== Screenshots =================================================================
+## Actual gameplay
 
-Pale Eden shifts through five different environments during a single mission:
+These screenshots were captured directly from a running Episode 6 game. They
+include the player ship, enemies, weapons, explosions, HUD, and mission names.
 
-![Pale Eden environments](screenshots/episode6/pale-eden/pale-eden-contact-sheet.png)
+### FIRST CNT
 
-Last Word descends through the broadcast cathedral toward the source of the
-transmission:
+![FIRST CNT opening encounter](screenshots/episode6/gameplay/first-contact-encounter.png)
 
-![Last Word environments](screenshots/episode6/last-word/last-word-contact-sheet.png)
+![FIRST CNT firefight](screenshots/episode6/gameplay/first-contact-firefight.png)
+
+### COLD ECHO
+
+![COLD ECHO enemy encounter](screenshots/episode6/gameplay/cold-echo-encounter.png)
+
+### LAST WORD
+
+![LAST WORD cathedral encounter](screenshots/episode6/gameplay/last-word-cathedral.png)
+
+![LAST WORD firefight](screenshots/episode6/gameplay/last-word-firefight.png)
 
 The eight missions are:
 
