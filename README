@@ -27,6 +27,17 @@ moon, an artificial black sun, a fractured machine paradise, and the buried
 cathedral of the First Voice. Each mission has its own scenery and encounter
 style instead of repeating a single visual theme.
 
+== Screenshots =================================================================
+
+Pale Eden shifts through five different environments during a single mission:
+
+![Pale Eden environments](screenshots/episode6/pale-eden/pale-eden-contact-sheet.png)
+
+Last Word descends through the broadcast cathedral toward the source of the
+transmission:
+
+![Last Word environments](screenshots/episode6/last-word/last-word-contact-sheet.png)
+
 The eight missions are:
 
 1. FIRST CNT  -- the first encounter with the unknown transmission
@@ -43,15 +54,38 @@ equipment shops, equipment from the original episodes, and a full ending. It
 remains faithful to the look and feel of Tyrian 2000 while taking the campaign
 into places the original game never visited.
 
-Start the new episode directly with:
-
-  ./opentyrian2000 --data=data --episode=6
-
-== Additional Necessary Files ==================================================
+== Install the Episode ==========================================================
 
 OpenTyrian2000 requires the Tyrian 2000 data files, which have been released
 as freeware:
+
   https://www.camanis.net/tyrian/tyrian2000.zip
+
+First download the original data and extract Episodes 1–5 into the repository's
+`data/` folder. Episode 6 is built from those original game assets, so they must
+be present before running the Episode 6 tool.
+
+From the repository root, enter the Episode 6 tools folder and build the new
+episode:
+
+```sh
+cd tools/episode6
+python3 generate_episode6.py
+```
+
+The tool validates the episode and automatically adds these three generated
+files to the repository's `data/` folder:
+
+- `tyrian6.lvl`
+- `levels6.dat`
+- `cubetxt6.dat`
+
+Return to the repository root and start Episode 6:
+
+```sh
+cd ../..
+./opentyrian2000 --data=data --episode=6
+```
 
 == Keyboard Controls ===========================================================
 
